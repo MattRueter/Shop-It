@@ -16,6 +16,7 @@ body{
   width:150px;
 }
 
+
 /*NAVBAR */
 .navbar{
   display:flex;
@@ -35,7 +36,7 @@ body{
   font-family: courier;
   font-size:larger;
 }
-.navbar :hover{
+.navbarItem:hover{
   background-color:whitesmoke;
   color: black;
 }

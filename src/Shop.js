@@ -11,7 +11,7 @@ export default function Shop (){
 		<div id="shopMain">
 			<Navbar />
 			<div id="shoppingContainer">
-				<div id="displayCurrent">Showing:</div>
+				<div id="displayCurrent">Showing: /All items</div>
 				<div id="cardContainer">
 					<Card />
 					<Card />

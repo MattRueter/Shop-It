@@ -8,25 +8,31 @@
 	display:flex;
 	flex-direction:column;
 	justify-content: center;
+	align-items:center;
 	background-color:beige;
 	width:70%;
 	min-height:800px;
 	margin-left:15%;
+	margin-bottom:5%;
+	margin-top:5%;
 }
 #displayCurrent{
-	border:1px solid black;
-}
-#cardContainer{
-	display:flex;
-	justify-content: space-between;
-	flex-wrap:wrap;
+	width:100%;
+	font-size:x-large;
 }
 
 #pageTurner{
-	border:1px solid red;
+	width:50%;
+	text-align:center;
+	font-size: larger;
 }
 
 /*CARD*/
+#cardContainer{
+	display:flex;
+	justify-content:center;
+	flex-wrap:wrap;
+}
 .card{
 	display:flex;
 	flex-direction:column;
