@@ -49,6 +49,7 @@ export default Home;
 function Navbar (){
   return(
     <nav className="navbar">
+      <div className="logo"></div>
       <button className="navbarItem">HOME</button>
       <button className="navbarItem">SHOP</button>
       <button className="navbarItem">CART</button>
@@ -58,6 +59,7 @@ function Navbar (){
 function Footer (){
   return(
     <footer>
+      <div className="logo"></div>
       <div className="footerContainer">
         <div>Legal information</div>
         <div>Recycle-initiative</div>

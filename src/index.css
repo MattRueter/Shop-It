@@ -25,7 +25,11 @@ p{
 .pusherMedium{
   width: 400px;
 }
-
+.logo{
+  background-image:url("shopit_logo.png");
+  height:100px;
+  width:150px;
+}
 /*NAVBAR */
 .navbar{
   display:flex;
