@@ -37,6 +37,7 @@ function Home() {
       <Content id={contentProps[0].id} img={contentProps[0].img} heading={contentProps[0].heading} p={contentProps[0].p} />
       <Content id={contentProps[1].id} img={contentProps[1].img} heading={contentProps[1].heading} p={contentProps[1].p} />
       <Content id={contentProps[2].id} img={contentProps[2].img} heading={contentProps[2].heading} p={contentProps[2].p} />
+      <Footer />
     </div>
   );
 }
@@ -52,6 +53,25 @@ function Navbar (){
       <button className="navbarItem">SHOP</button>
       <button className="navbarItem">CART</button>
     </nav>
+  )
+}
+function Footer (){
+  return(
+    <footer>
+      <div className="footerContainer">
+        <div>Legal information</div>
+        <div>Recycle-initiative</div>
+      </div>
+      <div className="footerContainer">
+        <div>Careers</div>
+        <div>Contact us.</div>
+      </div>
+      <div className="footerContainer">
+        <div>Blog</div>
+        <div>Workshops</div>
+        <div>Podcasts</div>
+      </div>
+    </footer>
   )
 }
 

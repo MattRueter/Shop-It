@@ -25,6 +25,7 @@ p{
 .pusherMedium{
   width: 400px;
 }
+
 /*NAVBAR */
 .navbar{
   display:flex;
@@ -87,4 +88,21 @@ p{
   background-image:url("dress.jpg");
   height: 379px;
   width: 600px;
+}
+
+/*FOOTER*/
+footer{
+  display:flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color:rgb(66, 67, 47);
+  color:whitesmoke;
+}
+.footerContainer{
+  width:150px;
+  margin-left:1%;
+  margin-right:1%;
+}
+.footerContainer>*{
+  margin:15%;
 }
