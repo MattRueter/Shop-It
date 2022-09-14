@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import './home.css';
 
 const contentProps= [
   {
@@ -31,7 +32,7 @@ const contentProps= [
 
 export default function Home() {
   return (
-    <div>
+    <div id="homeMain">
       <Navbar />  
       <h1>Find quality handmade clothes.</h1>
       <Content id={contentProps[0].id} img={contentProps[0].img} heading={contentProps[0].heading} p={contentProps[0].p} />

@@ -1,0 +1,63 @@
+#homeMain{
+	background-image:url("generic clothing rack.jpg");
+  }
+  
+  h1{
+	width:300px;
+	font-size:100px;
+	font-family:courier;
+	color:whitesmoke;
+  }
+  h2{
+	width: 500px;
+	font-size:50px;
+	font-family:courier;
+   
+  }
+  p{
+	width: 500px;
+	font-size:25px;
+	font-family:courier;
+   
+  }
+
+/*CONTENT*/
+.content{
+	height: 500px;
+	/*max-width:1200px;*/
+	width:95%;
+	margin:1%;
+	padding:1%;
+	display:flex;
+	align-items:flex-start;
+	justify-content:flex-start;
+	background-color: black;
+	color:whitesmoke;
+  }
+  #contentDark{
+	background-color: black;
+	color:whitesmoke;
+  }
+  #contentLight{
+	background-color:#84aeb0f2;
+	color:black;
+  }
+  .content>*{
+	margin:3%;
+  }
+  #imageOne{
+	background-image:url("designer.jpg");
+	height: 250px;
+	width: 400px;
+  }
+  #imageTwo{
+	background-image:url("chair and sweater.jpg");
+	height: 400px;
+	width: 267px;
+  }
+  #imageThree{
+	background-image:url("dress.jpg");
+	height: 379px;
+	width: 600px;
+  }
+  
