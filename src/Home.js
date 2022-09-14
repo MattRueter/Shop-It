@@ -33,6 +33,8 @@ const contentProps= [
 ]
 
 export default function Home() {
+  
+
   return (
     <div id="homeMain">
       <Navbar />  

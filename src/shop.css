@@ -1,4 +1,50 @@
 #shopMain{
-	height:100vh;
-	background-color:skyblue;
+	background-image: url('jeans.jpg');
+}
+
+
+/*Display elements for showing cards*/
+#shoppingContainer{
+	display:flex;
+	flex-direction:column;
+	justify-content: center;
+	background-color:beige;
+	width:70%;
+	min-height:800px;
+	margin-left:15%;
+}
+#displayCurrent{
+	border:1px solid black;
+}
+#cardContainer{
+	display:flex;
+	justify-content: space-between;
+	flex-wrap:wrap;
+}
+
+#pageTurner{
+	border:1px solid red;
+}
+
+/*CARD*/
+.card{
+	display:flex;
+	flex-direction:column;
+	align-items: center;
+	justify-content: center;
+	margin:2%;
+	padding:1%;
+	height:300px;
+	width: 200px;
+	border: 1px solid rgb(187, 185, 185);
+	background-color: white;
+}
+.card:hover{
+	background-color:rgb(174, 207, 236);
+}
+.cardImage{
+	height: 200px;
+	width:  200px;
+	background-image:url("sweater.jpg");
+	background-repeat: no-repeat;
 }
