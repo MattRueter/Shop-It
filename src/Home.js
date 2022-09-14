@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {Link} from 'react-router-dom';
 
 const contentProps= [
   {
@@ -29,7 +29,7 @@ const contentProps= [
   }
 ]
 
-function Home() {
+export default function Home() {
   return (
     <div>
       <Navbar />  
@@ -42,17 +42,16 @@ function Home() {
   );
 }
 
-export default Home;
-
-
 
 function Navbar (){
   return(
     <nav className="navbar">
       <div className="logo"></div>
       <button className="navbarItem">HOME</button>
-      <button className="navbarItem">SHOP</button>
-      <button className="navbarItem">CART</button>
+      <Link className= 'navbarItem' to='/Shop'>
+        <button className="navbarItem">SHOP</button>
+      </Link>
+        <button className="navbarItem">CART</button>
     </nav>
   )
 }
