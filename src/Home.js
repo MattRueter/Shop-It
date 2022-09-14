@@ -1,6 +1,8 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
 import './home.css';
+import Navbar from './Navbar.js';
+import Footer from './Footer.js';
+
 
 const contentProps= [
   {
@@ -41,40 +43,6 @@ export default function Home() {
       <Footer />
     </div>
   );
-}
-
-
-function Navbar (){
-  return(
-    <nav className="navbar">
-      <div className="logo"></div>
-      <button className="navbarItem">HOME</button>
-      <Link className= 'navbarItem' to='/Shop'>
-        <button className="navbarItem">SHOP</button>
-      </Link>
-        <button className="navbarItem">CART</button>
-    </nav>
-  )
-}
-function Footer (){
-  return(
-    <footer>
-      <div className="logo"></div>
-      <div className="footerContainer">
-        <div>Legal information</div>
-        <div>Recycle-initiative</div>
-      </div>
-      <div className="footerContainer">
-        <div>Careers</div>
-        <div>Contact us.</div>
-      </div>
-      <div className="footerContainer">
-        <div>Blog</div>
-        <div>Workshops</div>
-        <div>Podcasts</div>
-      </div>
-    </footer>
-  )
 }
 
 function Content (props){
