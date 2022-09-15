@@ -14,14 +14,14 @@
 }
 
 .cartContainer{
-	/*if children overlow...scroll*/
-	border: 1px dashed black;
 	display: flex;
 	height:65% ;
 	width:75%;
 	background-color: rgb(218, 238, 243);
 }
 #cartItemsBox{
+	/*if children overlow...scroll*/
+	border:1px solid black;
 	height:90%;
 	width:80%;
 	

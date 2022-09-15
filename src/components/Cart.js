@@ -2,9 +2,20 @@ import '../css/cart.css';
 
 
 export default function Cart () {
+	const toggleCart =()=>{
+		const cartView = document.getElementById('blackOutScreen');
+		cartView.style.display==="none" ? show(cartView): hide(cartView);
+
+		function hide (element){
+			element.style.display = "none";
+		}
+		function show(element){
+			element.style.display ="flex";
+		}
+	}
 	return(
 		<div id="blackOutScreen">
-			<button className="closeBtn">close</button>
+			<button className="closeBtn" onClick={toggleCart}>close</button>
 			<div id="currentCartLabel">Showing: cart / wishlist</div>
 			<div className="cartContainer">
 				<div id="cartItemsBox">
