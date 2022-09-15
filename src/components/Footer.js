@@ -9,7 +9,9 @@ export default function Footer (){
 			<Link to='Legal'>
 		  		<div>Legal information</div>			
 			</Link>	
-		  <div>Recycle-initiative</div>
+			<Link to='Recyle'>
+		  		<div>Recycle-initiative</div>
+			</Link>
 		</div>
 		<div className="footerContainer">
 		  <div>Careers</div>
