@@ -1,5 +1,5 @@
 #shopMain{
-	background-image: url('jeans.jpg');
+	background-image: url('../images/jeans.jpg');
 }
 
 
@@ -51,6 +51,6 @@
 .cardImage{
 	height: 200px;
 	width:  200px;
-	background-image:url("sweater.jpg");
+	background-image:url("../images/sweater.jpg");
 	background-repeat: no-repeat;
 }

@@ -1,5 +1,5 @@
 #homeMain{
-	background-image:url("generic clothing rack.jpg");
+	background-image:url("../images/generic clothing rack.jpg");
   }
 
   h1{
@@ -46,17 +46,17 @@
 	margin:3%;
   }
   #imageOne{
-	background-image:url("designer.jpg");
+	background-image:url("../images/designer.jpg");
 	height: 250px;
 	width: 400px;
   }
   #imageTwo{
-	background-image:url("chair and sweater.jpg");
+	background-image:url("../images/chair and sweater.jpg");
 	height: 400px;
 	width: 267px;
   }
   #imageThree{
-	background-image:url("dress.jpg");
+	background-image:url("../images/dress.jpg");
 	height: 379px;
 	width: 600px;
   }

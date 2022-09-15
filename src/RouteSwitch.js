@@ -1,6 +1,7 @@
+import React from 'react';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
-import Home from './Home.js'
-import Shop from './Shop.js';
+import Home from './components/Home.js'
+import Shop from './components/Shop.js';
 
 function RouteSwitch (){
 	return(
