@@ -14,7 +14,9 @@ export default function Footer (){
 			</Link>
 		</div>
 		<div className="footerContainer">
-		  <div>Careers</div>
+		  <Link to='/Careers'>
+		  	<div>Careers</div>
+		  </Link>
 		  <div>Contact us.</div>
 		</div>
 		<div className="footerContainer">
