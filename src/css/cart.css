@@ -1,3 +1,15 @@
+.cartBtn{
+  height:50px;
+  border:none;
+  background-color:none;
+  font-family:cursive;
+  font-size:large;
+}
+#cartCloseBtn{
+	width: 200px;
+	font-size:xx-large;
+  }
+  
 #blackOutScreen{
 	display: none;
 	height:600px;

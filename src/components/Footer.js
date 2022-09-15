@@ -1,13 +1,14 @@
 import React from 'react';
-
-
+import {Link} from 'react-router-dom';
 
 export default function Footer (){
 	return(
 	  <footer>
 		<div className="logo"></div>
 		<div className="footerContainer">
-		  <div>Legal information</div>
+			<Link to='Legal'>
+		  		<div>Legal information</div>			
+			</Link>	
 		  <div>Recycle-initiative</div>
 		</div>
 		<div className="footerContainer">

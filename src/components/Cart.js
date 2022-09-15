@@ -15,7 +15,7 @@ export default function Cart () {
 	}
 	return(
 		<div id="blackOutScreen">
-			<button className="closeBtn" onClick={toggleCart}>close</button>
+			<button className="cartBtn" id="cartCloseBtn" onClick={toggleCart}>close</button>
 			<div id="currentCartLabel">Showing: cart / wishlist</div>
 			<div className="cartContainer">
 				<div id="cartItemsBox">
@@ -49,7 +49,7 @@ function OrderSummary (){
 			<h3>Order Summary</h3>
 			<p>Items: 5</p>
 			<p>Total: $75.89</p>
-			<button>Checkout</button>
+			<button className="cartBtn">Checkout</button>
 		</div>
 	)
 }

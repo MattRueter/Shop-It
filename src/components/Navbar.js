@@ -23,10 +23,10 @@ export default function Navbar (){
 	return(
 	  <nav className="navbar">
 		<div className="logo"></div>
-		<Link to='/'className="navbarItem">
+		<Link to='/' >
 			<button className="navbarItem">HOME</button>
 		</Link>
-		<Link to='/Shop' className="navbarItem">
+		<Link to='/Shop' >
 		  <button className="navbarItem">SHOP</button>
 		</Link>
 

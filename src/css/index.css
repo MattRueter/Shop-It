@@ -3,6 +3,12 @@ body{
   background-color:black;
 }
 
+
+a{
+ color: inherit;
+ text-decoration: none;
+}
+
 .pusherLarge{
   width: 800px;
 }
@@ -15,18 +21,8 @@ body{
   height:100px;
   width:150px;
 }
-.closeBtn{
-  width: 200px;
-  height:50px;
-  font-size:xx-large;
-}
-button{
-  height:50px;
-  border:none;
-  background-color:none;
-  font-family:cursive;
-  font-size:large;
-}
+
+
 /*NAVBAR */
 .navbar{
   display:flex;
@@ -37,14 +33,18 @@ button{
   box-shadow: 1px 1px 1px;
   background-color:rgba(67, 99, 76, 0.36);
 }
+
 .navbarItem{
-  margin:3%;
-  padding:1%;
+  height: 75%; 
+  margin:3%; 
+  padding:1% ;
   border: none;
   background-color: rgba(36, 68, 45, 0.46);
   color:white;
   font-family: courier;
   font-size:larger;
+  text-align: center;
+  ;
 }
 .navbarItem:hover{
   background-color:whitesmoke;
