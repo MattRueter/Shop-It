@@ -1,20 +1,60 @@
 #blackOutScreen{
-	height:100vh;
+	height:600px;
 	width:80%;
 	margin-left:10%;
 	background-color:#000000d4;
 	display:flex;
-	justify-content: center;
+	flex-direction:column;
+	justify-content:center;
 	align-items:center;
 	position:fixed;
 }
+.blackOutScreenHidden{
+	display: none;
+}
+
 .cartContainer{
+	/*if children overlow...scroll*/
 	border: 1px dashed black;
 	display: flex;
-	height:75% ;
-	width:50%;
+	height:65% ;
+	width:75%;
 	background-color: rgb(218, 238, 243);
 }
-.cartContainerHidden{
-	display: none;
+#cartItemsBox{
+	height:90%;
+	width:80%;
+	
+}
+
+#currentCartLabel{
+	margin-top:1%;
+	height:25px;
+	color:white;
+	font-size:larger;
+	text-align:center;
+}
+/*CartItem styles*/
+.cartitem{
+	border:1px solid black;
+	margin:1%;
+	padding:1%;
+	display:flex;
+	justify-content:space-between;
+}
+
+.quantityBox{
+	border: 1px solid black;
+}
+.imageTest{
+	background-image:url("../images/sweater_Small.jpg");
+	height: 80px;
+	width:109px;
+}
+
+
+/*OrderSummary styles*/
+#orderSummaryBox{
+	height:90%;
+	width: 20%;
 }

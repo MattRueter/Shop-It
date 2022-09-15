@@ -15,7 +15,13 @@ body{
   height:100px;
   width:150px;
 }
-
+.closeBtn{
+  background-color:none;
+  width: 200px;
+  height:75px;
+  font-family:cursive;
+  font-size: x-large;
+}
 
 /*NAVBAR */
 .navbar{
