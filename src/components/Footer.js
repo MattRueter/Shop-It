@@ -6,31 +6,18 @@ export default function Footer (){
 	  <footer>
 		<div className="logo"></div>
 		<div className="footerContainer">
-			<Link to='/Legal'>
-		  		<div>Legal information</div>			
-			</Link>	
-			<Link to='/Recyle'>
-		  		<div>Recycle-initiative</div>
-			</Link>
+			<Link to='/Legal'><div>Legal information</div></Link>	
+			<Link to='/Recyle'><div>Recycle-initiative</div></Link>
 		</div>
 		<div className="footerContainer">
-		  <Link to='/Careers'>
-		  	<div>Careers</div>
-		  </Link>
-		  <Link to='/Contact-us'>
-		  	<div>Contact us</div>
-		  </Link>
+		  <Link to='/Careers'><div>Careers</div></Link>
+		  <Link to='/Contact-us'><div>Contact us</div></Link>
+		  <Link to='/Photo-credits'><div>Photo credits</div></Link>
 		</div>
 		<div className="footerContainer">
-			<Link to='/Blog'>
-		  		<div>Blog</div>
-			</Link>
-			<Link to='/Workshops'>
-		  		<div>Workshops</div>
-			</Link>
-			<Link to='/Podcasts'>
-		  		<div>Podcasts</div>
-			</Link>
+			<Link to='/Blog'><div>Blog</div></Link>
+			<Link to='/Workshops'><div>Workshops</div></Link>
+			<Link to='/Podcasts'><div>Podcasts</div></Link>
 		</div>
 	  </footer>
 	)

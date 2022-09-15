@@ -9,6 +9,7 @@ import ContactPage from './footer_links/Contact_page';
 import BlogPage   from './footer_links/Blog_page';
 import PodcastsPage from './footer_links/Podcasts_page';
 import WorkshopsPage from './footer_links/Workshops_page';
+import PhotoCreditsPage from './footer_links/PhotoCredits_page';
 
 function RouteSwitch (){
 	return(
@@ -23,6 +24,7 @@ function RouteSwitch (){
 				<Route path='/Blog'			element={<BlogPage />}		/>
 				<Route path='/Podcasts'		element={<PodcastsPage/>}	/>
 				<Route path='/Workshops'	element={<WorkshopsPage/>}	/>
+				<Route path='/Photo-credits'element={<PhotoCreditsPage />}/>
 			</Routes>
 		</BrowserRouter>
 	)
