@@ -2,7 +2,7 @@ import React from 'react';
 import '../css/shop.css';
 import Navbar from './Navbar.js';
 import Footer from './Footer.js';
-
+import Cart from './Cart.js';
 
 export default function Shop (){
 	
@@ -10,6 +10,7 @@ export default function Shop (){
 	return(
 		<div id="shopMain">
 			<Navbar />
+			<Cart />
 			<div id="shoppingContainer">
 				<div id="displayCurrent">Showing: /All items</div>
 				<div id="cardContainer">

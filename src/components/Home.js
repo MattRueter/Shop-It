@@ -2,6 +2,7 @@ import React from 'react';
 import '../css/home.css';
 import Navbar from './Navbar.js';
 import Footer from './Footer.js';
+import Cart from './Cart.js';
 
 
 const contentProps= [
@@ -38,6 +39,7 @@ export default function Home() {
   return (
     <div id="homeMain">
       <Navbar />  
+      <Cart />
       <h1>Find quality handmade clothes.</h1>
       <Content id={contentProps[0].id} img={contentProps[0].img} heading={contentProps[0].heading} p={contentProps[0].p} />
       <Content id={contentProps[1].id} img={contentProps[1].img} heading={contentProps[1].heading} p={contentProps[1].p} />

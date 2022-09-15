@@ -1,0 +1,20 @@
+#blackOutScreen{
+	height:100vh;
+	width:80%;
+	margin-left:10%;
+	background-color:#000000d4;
+	display:flex;
+	justify-content: center;
+	align-items:center;
+	position:fixed;
+}
+.cartContainer{
+	border: 1px dashed black;
+	display: flex;
+	height:75% ;
+	width:50%;
+	background-color: rgb(218, 238, 243);
+}
+.cartContainerHidden{
+	display: none;
+}
