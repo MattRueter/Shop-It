@@ -47,8 +47,8 @@ function OrderSummary (){
 	return(
 		<div id="orderSummaryBox">
 			<h3>Order Summary</h3>
-			<p># of items.</p>
-			<p>order-total</p>
+			<p>Items: 5</p>
+			<p>Total: $75.89</p>
 			<button>Checkout</button>
 		</div>
 	)

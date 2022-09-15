@@ -5,7 +5,12 @@ export default function Navbar (){
 
 	const toggleCart =()=>{
 		const cartView = document.getElementById('blackOutScreen');
-		cartView.style.display==="none" ? show(cartView): hide(cartView);
+		
+		if(!cartView.style.display || cartView.style.display==='none'){
+			show(cartView);
+		}else{
+			hide(cartView);
+		}
 
 		function hide (element){
 			element.style.display = "none";

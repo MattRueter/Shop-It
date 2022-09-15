@@ -16,13 +16,17 @@ body{
   width:150px;
 }
 .closeBtn{
-  background-color:none;
   width: 200px;
-  height:75px;
-  font-family:cursive;
-  font-size: x-large;
+  height:50px;
+  font-size:xx-large;
 }
-
+button{
+  height:50px;
+  border:none;
+  background-color:none;
+  font-family:cursive;
+  font-size:large;
+}
 /*NAVBAR */
 .navbar{
   display:flex;
