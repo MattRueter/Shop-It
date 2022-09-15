@@ -6,10 +6,10 @@ export default function Footer (){
 	  <footer>
 		<div className="logo"></div>
 		<div className="footerContainer">
-			<Link to='Legal'>
+			<Link to='/Legal'>
 		  		<div>Legal information</div>			
 			</Link>	
-			<Link to='Recyle'>
+			<Link to='/Recyle'>
 		  		<div>Recycle-initiative</div>
 			</Link>
 		</div>

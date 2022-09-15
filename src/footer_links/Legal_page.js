@@ -8,7 +8,7 @@ export default function LegalPage (){
 	return (
 		<div>
 			<Navbar />
-			<h1>Here will be some legal information!</h1>
+			<h1>See you in court!</h1>
 			<Footer />
 		</div>
 	)

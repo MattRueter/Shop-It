@@ -11,8 +11,8 @@ function RouteSwitch (){
 			<Routes>
 				<Route path='/' element={<Home/>} 				/>
 				<Route path='/Shop' element={<Shop/>} 			/>
-				<Route path='Legal' element={<LegalPage/>} 		/>
-				<Route path='Recyle'element={<RecyclePage />}	/>
+				<Route path='/Legal' element={<LegalPage/>} 		/>
+				<Route path='/Recyle'element={<RecyclePage />}	/>
 			</Routes>
 		</BrowserRouter>
 	)
