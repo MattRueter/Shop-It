@@ -17,12 +17,20 @@ export default function Footer (){
 		  <Link to='/Careers'>
 		  	<div>Careers</div>
 		  </Link>
-		  <div>Contact us.</div>
+		  <Link to='/Contact-us'>
+		  	<div>Contact us</div>
+		  </Link>
 		</div>
 		<div className="footerContainer">
-		  <div>Blog</div>
-		  <div>Workshops</div>
-		  <div>Podcasts</div>
+			<Link to='/Blog'>
+		  		<div>Blog</div>
+			</Link>
+			<Link to='/Workshops'>
+		  		<div>Workshops</div>
+			</Link>
+			<Link to='/Podcasts'>
+		  		<div>Podcasts</div>
+			</Link>
 		</div>
 	  </footer>
 	)
