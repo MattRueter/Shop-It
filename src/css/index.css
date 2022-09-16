@@ -3,9 +3,6 @@ body{
   margin:0%;
   background-color:black;
 }
-#workshopBackground{
-  background-image:url("../images/woolset.jpg");
-}
 
 a{
  color: inherit;
