@@ -2,25 +2,6 @@
 	background-image:url("../images/generic clothing rack.jpg");
   }
 
-  h1{
-	width:300px;
-	font-size:100px;
-	font-family:courier;
-	color:whitesmoke;
-  }
-  h2{
-	width: 500px;
-	font-size:50px;
-	font-family:courier;
-   
-  }
-  p{
-	width: 500px;
-	font-size:25px;
-	font-family:courier;
-   
-  }
-
 /*CONTENT*/
 .content{
 	height: 500px;

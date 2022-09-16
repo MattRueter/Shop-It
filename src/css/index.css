@@ -4,6 +4,25 @@ body{
   background-color:black;
 }
 
+h1{
+	width:300px;
+	font-size:100px;
+	font-family:courier;
+	color:whitesmoke;
+  }
+h2{
+	width: 500px;
+	font-size:50px;
+	font-family:courier;
+   
+  }
+p{
+	width: 500px;
+	font-size:25px;
+	font-family:courier;
+   
+  }
+
 a{
  color: inherit;
  text-decoration: none;
