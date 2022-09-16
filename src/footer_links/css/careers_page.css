@@ -1,0 +1,10 @@
+#careersBackground{
+	background-image:url("../../images/shopit_logo.png");
+}
+
+#office{
+	background-image:url("../../images/office.jpg");
+	width:400px;
+	height:200px;
+	margin-top:10%;
+}
