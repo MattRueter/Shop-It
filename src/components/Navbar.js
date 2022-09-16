@@ -23,12 +23,8 @@ export default function Navbar (){
 	return(
 	  <nav className="navbar">
 		<div className="logo"></div>
-		<Link to='/' >
-			<button className="navbarItem">HOME</button>
-		</Link>
-		<Link to='/Shop' >
-		  <button className="navbarItem">SHOP</button>
-		</Link>
+		<Link to='/'className="navbarItem" >HOME</Link>
+		<Link to='/Shop' className="navbarItem" >SHOP</Link>
 
 		  <button className="navbarItem" onClick={toggleCart}>CART</button>
 	  </nav>
