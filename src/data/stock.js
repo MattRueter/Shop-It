@@ -1,9 +1,16 @@
 import sweater from '../images/product_images/sweater.jpg';
+import vNeckSweater from '../images/product_images/v-neck-sweater.jpg'
+import darkJeans from '../images/product_images/dark-jeans.jpg';
+
+//to edit
+import woolSocks from '../images/product_images/wool-socks.jpg';
+import handBag from '../images/product_images/handbag.jpg';
+import cottonShorts from '../images/product_images/cotton-shorts.jpg';
 
 const stock =[
 	{product:'Sweater', 		price:47, img:sweater, 				   details:"Product details", 	id:"1"},
-	{product:'Large sweater', 	price:57, img:"../images/sweater.jpg", details:"Some details..", 	id:"2"},
-	{product:'Jeans', 			price:62, img:"../images/sweater.jpg", details:"jeans details..", 	id:"3"},
+	{product:'V neck sweater', 	price:57, img:vNeckSweater,			   details:"Some details..", 	id:"2"},
+	{product:'Jeans', 			price:62, img:darkJeans,			   details:"jeans details..", 	id:"3"},
 	{product:'Wool socks',	 	price:17, img:"../images/sweater.jpg", details:"Some details..", 	id:"4"},
 	{product:'Hand-bag',		price:37, img:"../images/sweater.jpg", details:"Some details..", 	id:"5"},
 	{product:'Shorts',		 	price:24, img:"../images/sweater.jpg", details:"Some details..", 	id:"6"},
