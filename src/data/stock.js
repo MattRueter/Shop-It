@@ -1,4 +1,4 @@
-import sweater from '../images/sweater.jpg';
+import sweater from '../images/product_images/sweater.jpg';
 
 const stock =[
 	{product:'Sweater', 		price:47, img:sweater, 				   details:"Product details", 	id:"1"},
