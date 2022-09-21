@@ -4,11 +4,13 @@ import './css/blog_page.css'
 
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import Cart from '../components/Cart';
 
 export default function BlogPage (){
 	return (
 		<div id='blogBackground'>
 			<Navbar />
+			<Cart />
 			<main className="lightMain" id="blogMain">
 				<h1>Blog</h1>
 				<p>Enjoy articles written by staff and community members. 

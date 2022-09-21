@@ -33,6 +33,7 @@
 	border:1px solid black;
 	height:90%;
 	width:80%;
+	padding:1%;
 	
 }
 
@@ -49,16 +50,31 @@
 	margin:1%;
 	padding:1%;
 	display:flex;
+	justify-content:flex-start;
+}
+.cartItemImage{
+	height: 80px;
+	width:109px;
+	border:3px solid white;
+	box-shadow:5px 5px 10px;
+}
+.cartItemInfo{
+	margin-left:2%;
+	width:80%;
+	display:flex;
 	justify-content:space-between;
+	border:1px dotted pink;
+}
+.cartItemInfo>*{
+	min-width: 25%;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	font-size:x-large;
 }
 
 .quantityBox{
 	border: 1px solid black;
-}
-.imageTest{
-	background-image:url("../images/sweater_Small.jpg");
-	height: 80px;
-	width:109px;
 }
 
 

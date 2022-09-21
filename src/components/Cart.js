@@ -1,4 +1,6 @@
 import '../css/cart.css';
+import usrCart from '../data/usrCart.js';
+
 
 
 export default function Cart () {
@@ -12,15 +14,26 @@ export default function Cart () {
 		function show(element){
 			element.style.display ="flex";
 		}
-	}
+	};
+	const currentCart =usrCart.map((item,index)=>{
+		return(
+			<CartItem 
+			img={item.img} 
+			product={item.product} 
+			price={item.price} 
+			quantity={item.quantity} 
+			total={item.quantity * item.price} 
+			key={item.id} />
+		)
+	});
+
 	return(
 		<div id="blackOutScreen">
 			<button className="cartBtn" id="cartCloseBtn" onClick={toggleCart}>close</button>
 			<div id="currentCartLabel">Showing: cart / wishlist</div>
 			<div className="cartContainer">
 				<div id="cartItemsBox">
-					<CartItem />
-					<CartItem />
+					{currentCart}
 				</div>
 				<OrderSummary />
 			</div>
@@ -28,18 +41,22 @@ export default function Cart () {
 	)
 }
 
-function CartItem (){
+function CartItem ({img,product,price,quantity,total}){
 	return(
 		<div className="cartitem">
-			<div className="imageTest"></div>
-			<div>Sweater</div>
-			<div>Item-price</div>
-			<div className="quantitybox">
-				<div>2</div>
-				<div>+</div>
-				<div>-</div>
+			<img src={img} alt={product} className="cartItemImage"></img>
+		
+			<div className="cartItemInfo">
+				<div>{product}</div>
+				<div>{price}</div>
+				<div className="quantitybox">
+					<div>{quantity}</div>
+					<div>+</div>
+					<div>-</div>
+				</div>
+				<div>{total}</div>
 			</div>
-			<div>Total</div>
+
 		</div>
 	)
 }
