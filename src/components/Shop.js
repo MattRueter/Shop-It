@@ -8,7 +8,7 @@ import Cart from './Cart.js';
 
 import stock from '../data/stock.js';
 
-//import sweater from '../images/sweater.jpg';
+
 
 
 export default function Shop (){
@@ -16,7 +16,7 @@ export default function Shop (){
 	const allItems = stock.map((item)=>{
 		
 		return(
-			<Card img={item.img} product={item.product} price={item.price} key={item.id} />
+			<Card img={item.img} product={item.product} price={item.price} id={item.id} />
 		)
 	});
 
@@ -38,8 +38,14 @@ export default function Shop (){
 	)
 }
 
-function Card ({img,product, price}){
+function Card ({img,product, price, id}){
 
+	function addItem (){
+		console.log("----------");
+		console.log(product);
+		console.log(id);
+		console.log("----------");
+	}
 
 	return (
 		<div className="card" >
@@ -47,6 +53,7 @@ function Card ({img,product, price}){
 			<div>{product}</div>
 			<div>{price} </div>
 			<button>details</button>
+			<button onClick={addItem}>+</button>
 		</div>
 	)
 }
