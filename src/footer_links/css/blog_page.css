@@ -18,14 +18,16 @@
 	justify-content:center;
 	/*width:350px;   for smaller cards*/
 	width:600px; 
-	height:150px;
+	max-height:200px;
 	margin:2%;
 	padding:3%;
 	border:1px solid black;
 	box-shadow: 1px 1px 1px black;
 }
 .blogSummary{
-	display: flex;
-	width: 300px;
-	margin:1%;
+	width: 85%;
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+
 }
