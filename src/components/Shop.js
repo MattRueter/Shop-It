@@ -43,7 +43,6 @@ function Card ({img,product, price, id}){
 
 	function addItem (){
 		usrCart.push({product, price, img,quantity:1, id});
-		console.log(usrCart);
 	}
 
 	return (

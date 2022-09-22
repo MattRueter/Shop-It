@@ -1,3 +1,4 @@
+import {useState} from 'react';
 import '../css/cart.css';
 import usrCart from '../data/usrCart.js';
 
@@ -5,6 +6,8 @@ import usrCart from '../data/usrCart.js';
 
 
 export default function Cart () {
+	const [currentCart, setCurrentCart]=useState(usrCart);
+
 	const toggleCart =()=>{
 		const cartView = document.getElementById('cart');
 		cartView.style.display==="none" ? show(cartView): hide(cartView);
@@ -17,9 +20,9 @@ export default function Cart () {
 		}
 	};
 
-	const currentCart =usrCart.map((item,index)=>{
+	const displayCart = currentCart.map((item)=>{
 		return(
-			<CartItem 
+			<CartItem
 			img={item.img} 
 			product={item.product} 
 			price={item.price} 
@@ -27,7 +30,7 @@ export default function Cart () {
 			total={item.quantity * item.price} 
 			key={item.id} />
 		)
-	});
+	})
 
 	return(
 		<div id="cart">
@@ -35,7 +38,7 @@ export default function Cart () {
 			<div id="currentCartLabel">Showing: cart / wishlist</div>
 			<div className="cartContainer">
 				<div id="cartItemsBox">
-					{currentCart}
+					{displayCart}
 				</div>
 				<OrderSummary />
 			</div>
