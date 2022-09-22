@@ -14,8 +14,8 @@ export default function WorkshopsPage () {
 		<div id="workshopBackground" >
 			<Navbar />
 			<h1>Workshops</h1>
-			<h1>some text</h1>
-			<h1>some text</h1>
+			<h2>some text</h2>
+			<h2>some text</h2>
 			<Footer />
 		</div>
 	)
