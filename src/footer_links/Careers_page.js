@@ -4,13 +4,12 @@ import './css/careers_page.css';
 
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import Cart from '../components/Cart';
+
 
 export default function CareersPage (){
 	return (
 		<div id="careersBackground">
 			<Navbar />
-			<Cart />
 			<div className="pageContainer">
 				<header className="pageHeader">
 					<h1>Come work with us.</h1>

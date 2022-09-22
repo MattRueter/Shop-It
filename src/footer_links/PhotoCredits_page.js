@@ -4,7 +4,7 @@ import './css/photoCredits_page.css';
 
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import Cart from '../components/Cart';
+
 
 const credits =[
 	{img:"generic_clothing_rack",	credit:"" },
@@ -38,7 +38,6 @@ export default function PhotoCreditsPage () {
 	return (
 		<div id="photoCreditsBackground">
 			<Navbar />
-			<Cart />
 			<div className="pageContainer">
 				<header className="pageHeader">
 					<div id="camera"></div>
