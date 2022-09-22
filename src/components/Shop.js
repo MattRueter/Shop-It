@@ -7,6 +7,7 @@ import Footer from './Footer.js';
 import Cart from './Cart.js';
 
 import stock from '../data/stock.js';
+import usrCart from '../data/usrCart.js';
 
 
 
@@ -45,6 +46,8 @@ function Card ({img,product, price, id}){
 		console.log(product);
 		console.log(id);
 		console.log("----------");
+		usrCart.push({product, price, img,quantity:1, id});
+		console.log(usrCart);
 	}
 
 	return (
@@ -57,5 +60,3 @@ function Card ({img,product, price, id}){
 		</div>
 	)
 }
-
-//<div style={{backgroundImage:`url(${img})`}}  className="cardImage"></div>
