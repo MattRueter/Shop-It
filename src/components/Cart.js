@@ -3,9 +3,10 @@ import usrCart from '../data/usrCart.js';
 
 
 
+
 export default function Cart () {
 	const toggleCart =()=>{
-		const cartView = document.getElementById('blackOutScreen');
+		const cartView = document.getElementById('cart');
 		cartView.style.display==="none" ? show(cartView): hide(cartView);
 
 		function hide (element){
@@ -15,6 +16,7 @@ export default function Cart () {
 			element.style.display ="flex";
 		}
 	};
+
 	const currentCart =usrCart.map((item,index)=>{
 		return(
 			<CartItem 
@@ -28,7 +30,7 @@ export default function Cart () {
 	});
 
 	return(
-		<div id="blackOutScreen">
+		<div id="cart">
 			<button className="cartBtn" id="cartCloseBtn" onClick={toggleCart}>close</button>
 			<div id="currentCartLabel">Showing: cart / wishlist</div>
 			<div className="cartContainer">

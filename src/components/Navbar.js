@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
 export default function Navbar (){
 
 	const toggleCart =()=>{
-		const cartView = document.getElementById('blackOutScreen');
+		const cartView = document.getElementById('cart');
 		
 		if(!cartView.style.display || cartView.style.display==='none'){
 			show(cartView);
