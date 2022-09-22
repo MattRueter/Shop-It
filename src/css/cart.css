@@ -5,7 +5,8 @@
 .cartContainer{
 	display: flex;
 	background-color: rgb(240, 251, 253);
-	min-height:800px;
+	min-height:700px;
+	max-height:750px;
 	width:70%;
 	margin-left:15%;
 	margin-bottom: 5%;
@@ -14,10 +15,11 @@
 #cartItemsBox{
 	/*if children overlow...scroll*/
 	border:1px solid black;
-	height:90%;
+	max-height:90%;
 	width:80%;
 	margin:1%;
 	padding:1%;
+	overflow:scroll;
 	
 }
 
