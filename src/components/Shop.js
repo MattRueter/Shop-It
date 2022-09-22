@@ -4,7 +4,7 @@ import { useState } from 'react';
 import '../css/shop.css';
 import Navbar from './Navbar.js';
 import Footer from './Footer.js';
-import Cart from './Cart.js';
+
 
 import stock from '../data/stock.js';
 import usrCart from '../data/usrCart.js';
@@ -13,7 +13,6 @@ import usrCart from '../data/usrCart.js';
 
 
 export default function Shop (){
-
 	const allItems = stock.map((item)=>{
 		
 		return(
@@ -21,12 +20,11 @@ export default function Shop (){
 		)
 	});
 
-	//handleClick here
+
 
 	return(
 		<div id="shopMain">
 			<Navbar />
-			<Cart />
 			<div id="shoppingContainer">
 				<div id="displayCurrent">Showing: /All items</div>
 				<div id="cardContainer">

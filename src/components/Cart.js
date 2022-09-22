@@ -1,24 +1,13 @@
 import {useState} from 'react';
 import '../css/cart.css';
 import usrCart from '../data/usrCart.js';
-
-
+import Navbar from './Navbar.js';
+import Footer from './Footer.js';
 
 
 export default function Cart () {
 	const [currentCart, setCurrentCart]=useState(usrCart);
 
-	const toggleCart =()=>{
-		const cartView = document.getElementById('cart');
-		cartView.style.display==="none" ? show(cartView): hide(cartView);
-
-		function hide (element){
-			element.style.display = "none";
-		}
-		function show(element){
-			element.style.display ="flex";
-		}
-	};
 
 	const displayCart = currentCart.map((item)=>{
 		return(
@@ -33,15 +22,15 @@ export default function Cart () {
 	})
 
 	return(
-		<div id="cart">
-			<button className="cartBtn" id="cartCloseBtn" onClick={toggleCart}>close</button>
-			<div id="currentCartLabel">Showing: cart / wishlist</div>
+		<div id="cart">		
+			<Navbar />
 			<div className="cartContainer">
 				<div id="cartItemsBox">
 					{displayCart}
 				</div>
 				<OrderSummary />
 			</div>
+			<Footer />
 		</div>
 	)
 }
