@@ -42,10 +42,6 @@ export default function Shop (){
 function Card ({img,product, price, id}){
 
 	function addItem (){
-		console.log("----------");
-		console.log(product);
-		console.log(id);
-		console.log("----------");
 		usrCart.push({product, price, img,quantity:1, id});
 		console.log(usrCart);
 	}
