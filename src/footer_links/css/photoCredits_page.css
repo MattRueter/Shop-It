@@ -1,16 +1,7 @@
 #photoCreditsBackground{
 	background-image:url("../../images/lens.jpg");
 }
-.pageContainer{
-	margin-left:10%;
-	width:80%;
-	background-color:#000000e6;
-}
 
-.pageHeader{
-	display:flex;
-
-}
 #camera{
 	background-image: url("../../images/camera.jpg");
 	height:400px;

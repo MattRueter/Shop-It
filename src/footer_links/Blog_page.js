@@ -60,10 +60,10 @@ export default function BlogPage (){
 
 export function InfoCard ({image,title,post}) {
 	return(
-		<div className="blogPost">
+		<div className="infoCard">
 			<div>{image} </div>
 			<h4>{title}</h4>
-			<div className="blogSummary">{post}</div>
+			<div className="infoCardSummary">{post}</div>
 		</div>
 	)
 }
