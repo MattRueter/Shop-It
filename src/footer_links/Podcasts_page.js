@@ -17,7 +17,7 @@ let podcastsDB =[
 export default function PodcastsPage () {
 	const podcasts =podcastsDB.map((item,index)=>{
 		return(
-			<InfoCard image={item.img} title={item.title} post={item.post} />
+			<InfoCard image={item.img} title={`Episode-${index+1}: ${item.title}`} post={item.post} />
 		)
 	})
 
