@@ -1,0 +1,11 @@
+#podcastsPageImg{
+	border:1px solid white;
+	height:400px;
+	width:400px;
+}
+#headerContainer{
+	display:flex;
+}
+#headerContainer >*{
+	margin:2%;
+}
