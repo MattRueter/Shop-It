@@ -3,7 +3,9 @@ body{
   margin:0%;
   background-color:black;
 }
-
+h1,h2,h3{
+  margin-left:1%;
+}
 h1{
 	width:300px;
 	font-size:100px;
@@ -28,6 +30,9 @@ a{
  text-decoration: none;
  text-align:inherit;
 }
+.wideHeader{
+  width:80%;
+}
 
 .logo{
   background-image:url("../images/shopit_logo.png");
@@ -35,7 +40,7 @@ a{
   width:150px;
 }
 .pusherLarge{
-  width:600px;
+  width:450px;
   height:100%;
 }
 .lightText{

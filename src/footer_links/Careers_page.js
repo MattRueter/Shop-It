@@ -28,8 +28,8 @@ export default function CareersPage (){
 		<div id="careersBackground">
 			<Navbar />
 			<div className="pageContainer">
+				<h1 className="wideHeader">Come work with us.</h1>
 				<header className="pageHeader" id="careerPageHeader">
-					<h1>Come work with us.</h1>
 					<div id="office"></div>
 					<p className="lightText">
 					Fusce congue mi eget magna tristique, a viverra arcu molestie. 
