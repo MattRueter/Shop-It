@@ -38,7 +38,7 @@ let postsDB =[
 export default function BlogPage (){
 	const posts = postsDB.map((item,index)=>{
 		return(
-			<BlogPost image={item.img} title={item.title} post={item.post} />
+			<InfoCard image={item.img} title={item.title} post={item.post} />
 		)
 	})
 
@@ -58,7 +58,7 @@ export default function BlogPage (){
 	)
 }
 
-function BlogPost ({image,title,post}) {
+export function InfoCard ({image,title,post}) {
 	return(
 		<div className="blogPost">
 			<div>{image} </div>

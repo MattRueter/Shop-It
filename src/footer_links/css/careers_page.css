@@ -4,7 +4,16 @@
 
 #office{
 	background-image:url("../../images/office.jpg");
-	width:400px;
-	height:200px;
+	width:550px;
+	height:400px;
 	margin-top:10%;
+}
+#careerPageHeader > *{
+	margin:2%;
+}
+#careerPageHeader > p{
+	margin-top:10%;
+}
+#careerPageHeader{
+	border-bottom:1px solid white;
 }
