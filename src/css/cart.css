@@ -65,7 +65,7 @@
 	flex-direction:column;
 
 }
-#orderSummaryBox >* {
+#orderSummaryBox >h3, #orderSummaryBox>p {
 	border-bottom: 9px solid rgb(44, 78, 49);
 	border-left: 5px solid rgb(44, 78, 49);
 	border-top-left-radius: 15px;
