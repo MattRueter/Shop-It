@@ -26,13 +26,12 @@ export default function PodcastsPage () {
 			<Navbar />
 			<header className="lightText" >
 				<h1>Podcasts</h1>
+				<h2>We have our own podcasts!</h2>
 				<div id="headerContainer">
-					<h2>We have our own podcasts!</h2>
 					<p>
 					Join Edu and Maree as they chat about things related to 
 					making and selling clothes etc. etc..
 					</p>
-					<div id='podcastsPageImg'></div>
 				</div>
 			</header>
 			<main className="lightMain">

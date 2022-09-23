@@ -1,10 +1,8 @@
-#podcastsPageImg{
-	border:1px solid white;
-	height:400px;
-	width:400px;
-}
+
 #headerContainer{
 	display:flex;
+	background-image:url('../../images/podcasts.jpg');
+	height:500px;
 }
 #headerContainer >*{
 	margin:2%;
