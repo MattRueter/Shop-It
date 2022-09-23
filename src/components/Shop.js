@@ -13,7 +13,7 @@ import usrCart from '../data/usrCart.js';
 
 
 export default function Shop (){
-	const allItems = stock.map((item)=>{
+	const allItems = stock.map((item,index)=>{
 		
 		return(
 			<Card img={item.img} product={item.product} price={item.price} id={item.id} />

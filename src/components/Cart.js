@@ -17,6 +17,7 @@ export default function Cart() {
 				price={item.price}
 				quantity={item.quantity}
 				total={item.quantity * item.price}
+				key={index}
 			/>
 		)
 	})
@@ -64,11 +65,17 @@ function CartItem({ img, product, price, quantity, total }) {
 	)
 }
 function OrderSummary() {
+	const [numberOfItems, setNumberOfItems] = useState(usrCart.length);
+	let total = 0;
+	const totalPrice = usrCart.forEach(item => {
+		total += (item.price * item.quantity);
+	})
+
 	return (
 		<div id="orderSummaryBox">
 			<h3>Order Summary</h3>
-			<p>Items: 5</p>
-			<p>Total: $75.89</p>
+			<p>Items: {numberOfItems}</p>
+			<p>Total: ${total}</p>
 			<button id="checkoutBtn">Checkout</button>
 		</div>
 	)
