@@ -1,20 +1,36 @@
 import React from 'react';
 
 import './css/careers_page.css';
-
+import bloglabel from '../images/blog_logos/bloglabel.jpg';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import {InfoCard} from './Blog_page.js';
 
 let jobPostsDB =[
 	{
-	img:'an image', 
+	img:bloglabel,
 	title:"Front end developer", 
 	post:`Sed scelerisque venenatis quam, 
 	quis vehicula lorem tristique nec. Pellentesque eleifend felis lacus, eu 
 	pellentesque dui rutrum quis. Cras ligula elit, porttitor eu quam ultricies, 
 	fermentum scelerisque diam.`
-	}
+	},
+	{
+	img:bloglabel,
+	title:"UI/UX designer", 
+	post:`Sed scelerisque venenatis quam, 
+	quis vehicula lorem tristique nec. Pellentesque eleifend felis lacus, eu 
+	pellentesque dui rutrum quis. Cras ligula elit, porttitor eu quam ultricies, 
+	fermentum scelerisque diam.`
+	},
+	{
+	img:bloglabel,
+	title:"Marketing associate", 
+	post:`Sed scelerisque venenatis quam, 
+	quis vehicula lorem tristique nec. Pellentesque eleifend felis lacus, eu 
+	pellentesque dui rutrum quis. Cras ligula elit, porttitor eu quam ultricies, 
+	fermentum scelerisque diam.`
+	},
 ]
 
 
