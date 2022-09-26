@@ -16,7 +16,7 @@ export default function Shop (){
 	const allItems = stock.map((item,index)=>{
 		
 		return(
-			<Card img={item.img} product={item.product} price={item.price} id={item.id} />
+			<Card img={item.img} product={item.product} price={item.price}key={index} />
 		)
 	});
 

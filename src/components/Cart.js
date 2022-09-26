@@ -8,78 +8,55 @@ import Footer from './Footer.js';
 const currencies = { dollars: "$", euros: "€", pounds: "£" };
 export let crntCurrency = currencies.pounds;
 
-export default function Cart() {
-		
+//**************************************************************************** 
+//CartPage is responsible for rendering the whole page.
+//**************************************************************************** 
+export default function CartPage() {
+
 	return (
-		<div id="cart">
+		<div id="cartPage">
 			<Navbar />
-			<CartItem />
+			<Cart />
 			<Footer />
 		</div>
 	)
 }
-
-function CartItem () {
+//**************************************************************************** 
+//Cart is responsible renders the list of objects in the cart and an instance of the OrderSummary component.
+//**************************************************************************** 
+function Cart() {
 	const [currentCart, setCurrentCart] = useState(usrCart);
-	/*
-	const addOne=()=>{
-		//update the usrCart quantity for this item *access using index? i.e. sort out key issue.
-		//call update () which hopefully renders the Cart again and updates all children.
-		usrCart[index].quantity +=1
-		console.log(usrCart[index].quantity)
-		setCurrentCart(usrCart);
-		
-	}
-	const removeOne=()=>{
-		//update the usrCart quantity for this item *access using index? i.e. sort out key issue.
-		//call update () which hopefully renders the Cart again and updates all children.
-		usrCart[index].quantity -=1
-		console.log(usrCart[index].quantity)
-		setCurrentCart(usrCart);
-	}
-*/
-	const displayCart = currentCart.map((item, index) => {
-		return (
-			<div className="cartitem" key={index}>
-				<img src={item.img} alt={item.product} className="cartItemImage"></img>
-				<div className="cartItemInfo">
-					<div>{item.product}</div>
-					<div>
-						<div>Item Price:</div>
-						<div>{crntCurrency}{item.price}</div>
-					</div>
-					<div id="quantitybox">
-						<div>{item.quantity}</div>
-						<button>+</button>
-						<button>-</button>
-					</div>
-					<div>
-						<div>Total:</div>
-						<div>{crntCurrency}{item.total}</div>
-					</div>
-				</div>
-			</div>
-			
-		)
-	});
 
+	const displayItems = currentCart.map((item, index) => {
+		return (
+			<CartItems
+				img={item.img}
+				product={item.product}
+				price={item.price}
+				quantity={item.quantity}
+				total={item.price * item.quantity}
+				id={index}
+			/>
+		)
+	})
 	return (
 		<div className="cartContainer">
 			<div id="cartItemsBox">
-				{displayCart}
+				{displayItems}
 			</div>
 			<OrderSummary />
 		</div>
-			
+
 	)
-}
-
-
+};
+//****************************************************************************
+//child of Cart shows total items and price (updates with changes made to Cart)
+//**************************************************************************** 
 function OrderSummary() {
 	const numberOfItems = usrCart.length;
+
 	let total = 0;
-	
-	const totalPrice = usrCart.forEach(item => {
+	usrCart.forEach(item => {
 		total += (item.price * item.quantity);
 	})
 
@@ -89,6 +66,48 @@ function OrderSummary() {
 			<p>Items: {numberOfItems}</p>
 			<p>Total: {crntCurrency}{total}</p>
 			<button id="checkoutBtn">Checkout</button>
+		</div>
+	)
+};
+//**************************************************************************** 
+//child of Cart. List of items is constructed of instances of CartItems and is called in Cart.
+//**************************************************************************** 
+function CartItems({ img, product, price, quantity, total, id }) {
+	const [number, setNumber] 			= useState(quantity);
+	const [totalPrice, setTotalPrice]	= useState(total);
+
+	const addOne = () => {
+		console.log(`# OF ITEMS AT ()CALL: ${usrCart[id].quantity}`); //! the usrCart obj is untouched at the moment.
+		setNumber(number +1);
+		setTotalPrice(totalPrice + price)
+			
+	}
+	const removeOne = () => {
+		console.log(`# OF ITEMS AT ()CALL: ${usrCart[id].quantity}`); //! the usrCart obj is untouched at the moment.
+		setNumber(number -1);
+		setTotalPrice(totalPrice - price)
+		
+	}
+
+	return (
+		<div className="cartitem" id={id}>
+			<img src={img} alt={product} className="cartItemImage"></img>
+			<div className="cartItemInfo">
+				<div>{product}</div>
+				<div>
+					<div>Item Price:</div>
+					<div>{crntCurrency}{price}</div>
+				</div>
+				<div id="quantitybox">
+					<div>{number}</div>
+					<button onClick={addOne} >+</button>
+					<button onClick={removeOne}>-</button>
+				</div>
+				<div>
+					<div>Total:</div>
+					<div>{crntCurrency}{totalPrice}</div>
+				</div>
+			</div>
 		</div>
 	)
 }
