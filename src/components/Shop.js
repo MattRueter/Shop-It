@@ -8,7 +8,7 @@ import Footer from './Footer.js';
 
 import stock from '../data/stock.js';
 import usrCart from '../data/usrCart.js';
-
+import {crntCurrency} from './Cart.js';
 
 
 
@@ -47,7 +47,7 @@ function Card ({img,product, price, id}){
 		<div className="card" >
 			<img  src= {img} alt={product} className="cardImage"></img>
 			<div>{product}</div>
-			<div>{price} </div>
+			<div>{crntCurrency}{price} </div>
 			<button>details</button>
 			<button onClick={addItem}>+</button>
 		</div>

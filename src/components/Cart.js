@@ -5,10 +5,13 @@ import Navbar from './Navbar.js';
 import Footer from './Footer.js';
 
 
+const currencies = { dollars: "$", euros: "€", pounds: "£" };
+export let crntCurrency = currencies.pounds;
+
 export default function Cart() {
 	const [currentCart, setCurrentCart] = useState(usrCart);
 
-
+	
 	const displayCart = currentCart.map((item, index) => {
 		return (
 			<CartItem
@@ -21,6 +24,7 @@ export default function Cart() {
 			/>
 		)
 	})
+
 
 	return (
 		<div id="cart">
@@ -36,9 +40,9 @@ export default function Cart() {
 	)
 }
 
-function CartItem({ img, product, price, quantity, total }) {
-	let currencies = { dollars: "$", euros: "€", pounds: "£" };
-	let crntCurrency = currencies.euros;
+function CartItem({ img, product, price, quantity, total, handlePlus, handleMinus}) {
+	const [currentQuantity, setCurrentQuantity] = useState(quantity)
+	
 
 	return (
 		<div className="cartitem">
@@ -50,14 +54,14 @@ function CartItem({ img, product, price, quantity, total }) {
 					<div>Item Price:</div>
 					<div>{crntCurrency}{price}</div>
 				</div>
-				<div className="quantitybox">
-					<div>{quantity}</div>
-					<div>+</div>
-					<div>-</div>
+				<div id="quantitybox">
+					<div>{currentQuantity}</div>
+					<button>+</button>
+					<button>-</button>
 				</div>
 				<div>
 					<div>Total:</div>
-					<div> {crntCurrency}{total}</div>
+					<div>{crntCurrency}{total}</div>
 				</div>
 			</div>
 
@@ -67,6 +71,7 @@ function CartItem({ img, product, price, quantity, total }) {
 function OrderSummary() {
 	const [numberOfItems, setNumberOfItems] = useState(usrCart.length);
 	let total = 0;
+	
 	const totalPrice = usrCart.forEach(item => {
 		total += (item.price * item.quantity);
 	})
@@ -75,7 +80,7 @@ function OrderSummary() {
 		<div id="orderSummaryBox">
 			<h3>Order Summary</h3>
 			<p>Items: {numberOfItems}</p>
-			<p>Total: ${total}</p>
+			<p>Total: {crntCurrency}{total}</p>
 			<button id="checkoutBtn">Checkout</button>
 		</div>
 	)
