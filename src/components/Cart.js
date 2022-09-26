@@ -9,67 +9,74 @@ const currencies = { dollars: "$", euros: "€", pounds: "£" };
 export let crntCurrency = currencies.pounds;
 
 export default function Cart() {
-	const [currentCart, setCurrentCart] = useState(usrCart);
-
-	
-	const displayCart = currentCart.map((item, index) => {
-		return (
-			<CartItem
-				img={item.img}
-				product={item.product}
-				price={item.price}
-				quantity={item.quantity}
-				total={item.quantity * item.price}
-				key={index}
-			/>
-		)
-	})
-
-
+		
 	return (
 		<div id="cart">
 			<Navbar />
-			<div className="cartContainer">
-				<div id="cartItemsBox">
-					{displayCart}
-				</div>
-				<OrderSummary />
-			</div>
+			<CartItem />
 			<Footer />
 		</div>
 	)
 }
 
-function CartItem({ img, product, price, quantity, total, handlePlus, handleMinus}) {
-	const [currentQuantity, setCurrentQuantity] = useState(quantity)
-	
-
-	return (
-		<div className="cartitem">
-			<img src={img} alt={product} className="cartItemImage"></img>
-
-			<div className="cartItemInfo">
-				<div>{product}</div>
-				<div>
-					<div>Item Price:</div>
-					<div>{crntCurrency}{price}</div>
-				</div>
-				<div id="quantitybox">
-					<div>{currentQuantity}</div>
-					<button>+</button>
-					<button>-</button>
-				</div>
-				<div>
-					<div>Total:</div>
-					<div>{crntCurrency}{total}</div>
+function CartItem () {
+	const [currentCart, setCurrentCart] = useState(usrCart);
+	/*
+	const addOne=()=>{
+		//update the usrCart quantity for this item *access using index? i.e. sort out key issue.
+		//call update () which hopefully renders the Cart again and updates all children.
+		usrCart[index].quantity +=1
+		console.log(usrCart[index].quantity)
+		setCurrentCart(usrCart);
+		
+	}
+	const removeOne=()=>{
+		//update the usrCart quantity for this item *access using index? i.e. sort out key issue.
+		//call update () which hopefully renders the Cart again and updates all children.
+		usrCart[index].quantity -=1
+		console.log(usrCart[index].quantity)
+		setCurrentCart(usrCart);
+	}
+*/
+	const displayCart = currentCart.map((item, index) => {
+		return (
+			<div className="cartitem" key={index}>
+				<img src={item.img} alt={item.product} className="cartItemImage"></img>
+				<div className="cartItemInfo">
+					<div>{item.product}</div>
+					<div>
+						<div>Item Price:</div>
+						<div>{crntCurrency}{item.price}</div>
+					</div>
+					<div id="quantitybox">
+						<div>{item.quantity}</div>
+						<button>+</button>
+						<button>-</button>
+					</div>
+					<div>
+						<div>Total:</div>
+						<div>{crntCurrency}{item.total}</div>
+					</div>
 				</div>
 			</div>
+			
+		)
+	});
 
+	return (
+		<div className="cartContainer">
+			<div id="cartItemsBox">
+				{displayCart}
+			</div>
+			<OrderSummary />
 		</div>
+			
 	)
 }
+
+
 function OrderSummary() {
-	const [numberOfItems, setNumberOfItems] = useState(usrCart.length);
+	const numberOfItems = usrCart.length;
 	let total = 0;
 	
 	const totalPrice = usrCart.forEach(item => {
