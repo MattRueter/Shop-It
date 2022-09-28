@@ -27,6 +27,16 @@ export default function CartPage() {
 function Cart() {
 	const [currentCart, setCurrentCart] = useState(usrCart);
 	
+	const deleteItem = (cartId) =>{		
+		
+		usrCart.forEach(item =>{
+			if(item.id == usrCart[cartId].id){
+				usrCart.splice(item,1)
+			}
+		})
+		const updatedCart = usrCart.filter((item) =>item.id !== cartId)
+		setCurrentCart(updatedCart);	
+	};
 	
 	const displayItems = currentCart.map((item,index) => {
 		return (
@@ -38,6 +48,7 @@ function Cart() {
 				total={item.price * item.quantity}
 				cartId={index}
 				key={item.id}
+				deleteItem={deleteItem}
 			/>
 		)
 	})
@@ -55,12 +66,11 @@ function Cart() {
 //child of Cart shows total items and price (updates with changes made to Cart)
 //**************************************************************************** 
 function OrderSummary() {
-	//const numberOfItems = usrCart.length;
 	const numberOfItems = usrCart.length
 	
-	let cartTotal = 0;
-		usrCart.forEach(item => {
-		cartTotal += (item.price * item.quantity);
+	let total
+	let cartTotal = usrCart.forEach(item => {
+		total += (item.price * item.quantity);
 	})
 
 	return (
@@ -75,10 +85,10 @@ function OrderSummary() {
 //**************************************************************************** 
 //child of Cart. List of items is constructed of instances of CartItems and is called in Cart.
 //**************************************************************************** 
-function CartItems({ img, product, price, quantity, total, cartId}) {
+function CartItems({ img, product, price, quantity, total, cartId, deleteItem}) {
 	const [number, setNumber] 			= useState(quantity);
 	const [totalPrice, setTotalPrice]	= useState(total);
-	const [currentCart, setCurrentCart] = useState(usrCart)
+	
 
 	useEffect(()=>{
 		let cartTotal = 0;
@@ -98,14 +108,7 @@ function CartItems({ img, product, price, quantity, total, cartId}) {
 		setNumber(number -1);
 		setTotalPrice(totalPrice - price)		
 	}
-	const deleteItem = () =>{
-		console.log(cartId)
-		usrCart.forEach(item =>{
-			if(item.id === usrCart[cartId].id){
-				usrCart.splice(item,1)
-			}
-		})	
-	}
+	
 
 	return (
 		<div className="cartitem" id={cartId}>
@@ -125,7 +128,7 @@ function CartItems({ img, product, price, quantity, total, cartId}) {
 					<div>Total:</div>
 					<div>{crntCurrency}{totalPrice}</div>
 				</div>
-				<button id='trashcan'onClick={deleteItem}></button>
+				<button id='trashcan'onClick={() => deleteItem(cartId)}></button>
 			</div>
 		</div>
 	)
