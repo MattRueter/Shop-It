@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import '../css/cart.css';
 import usrCart from '../data/usrCart.js';
 import Navbar from './Navbar.js';
@@ -55,16 +55,16 @@ function Cart() {
 function OrderSummary() {
 	const numberOfItems = usrCart.length;
 
-	let total = 0;
-	usrCart.forEach(item => {
-		total += (item.price * item.quantity);
+	let cartTotal = 0;
+		usrCart.forEach(item => {
+		cartTotal += (item.price * item.quantity);
 	})
 
 	return (
 		<div id="orderSummaryBox">
 			<h3>Order Summary</h3>
 			<p>Items: {numberOfItems}</p>
-			<p>Total: {crntCurrency}{total}</p>
+			<p id='total'>Total: {crntCurrency}{cartTotal}</p>
 			<button id="checkoutBtn">Checkout</button>
 		</div>
 	)
@@ -76,14 +76,26 @@ function CartItems({ img, product, price, quantity, total, id }) {
 	const [number, setNumber] 			= useState(quantity);
 	const [totalPrice, setTotalPrice]	= useState(total);
 
+	useEffect(()=>{
+		const total = document.getElementById('total');
+		
+		let cartTotal = 0;
+		usrCart.forEach(item => {
+		cartTotal += (item.price * item.quantity);
+	})
+		total.textContent = `Total: ${crntCurrency}${cartTotal}`;
+	},[number,totalPrice])
+	
 	const addOne = () => {
-		console.log(`# OF ITEMS AT ()CALL: ${usrCart[id].quantity}`); //! the usrCart obj is untouched at the moment.
+		//console.log(`# OF ITEMS AT ()CALL: ${usrCart[id].quantity}`); //! the usrCart obj is untouched at the moment.
+		usrCart[id].quantity +=1
 		setNumber(number +1);
 		setTotalPrice(totalPrice + price)
 			
 	}
 	const removeOne = () => {
-		console.log(`# OF ITEMS AT ()CALL: ${usrCart[id].quantity}`); //! the usrCart obj is untouched at the moment.
+		//console.log(`# OF ITEMS AT ()CALL: ${usrCart[id].quantity}`); //! the usrCart obj is untouched at the moment.
+		usrCart[id].quantity -=1
 		setNumber(number -1);
 		setTotalPrice(totalPrice - price)
 		
