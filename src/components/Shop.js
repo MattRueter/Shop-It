@@ -16,7 +16,7 @@ export default function Shop (){
 	const allItems = stock.map((item,index)=>{
 		
 		return(
-			<Card img={item.img} product={item.product} price={item.price}key={index} />
+			<Card img={item.img} product={item.product} price={item.price}id={index}key={index} />
 		)
 	});
 
@@ -40,7 +40,7 @@ export default function Shop (){
 function Card ({img,product, price, id}){
 
 	function addItem (){
-		usrCart.push({product, price, img,quantity:1, id});
+		usrCart.push({product, price, img, quantity:1, id});
 	}
 
 	return (

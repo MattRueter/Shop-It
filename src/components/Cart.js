@@ -26,8 +26,9 @@ export default function CartPage() {
 //**************************************************************************** 
 function Cart() {
 	const [currentCart, setCurrentCart] = useState(usrCart);
-
-	const displayItems = currentCart.map((item, index) => {
+	
+	
+	const displayItems = currentCart.map((item,index) => {
 		return (
 			<CartItems
 				img={item.img}
@@ -35,7 +36,8 @@ function Cart() {
 				price={item.price}
 				quantity={item.quantity}
 				total={item.price * item.quantity}
-				id={index}
+				cartId={index}
+				key={item.id}
 			/>
 		)
 	})
@@ -53,8 +55,9 @@ function Cart() {
 //child of Cart shows total items and price (updates with changes made to Cart)
 //**************************************************************************** 
 function OrderSummary() {
-	const numberOfItems = usrCart.length;
-
+	//const numberOfItems = usrCart.length;
+	const numberOfItems = usrCart.length
+	
 	let cartTotal = 0;
 		usrCart.forEach(item => {
 		cartTotal += (item.price * item.quantity);
@@ -64,7 +67,7 @@ function OrderSummary() {
 		<div id="orderSummaryBox">
 			<h3>Order Summary</h3>
 			<p>Items: {numberOfItems}</p>
-			<p id='total'>Total: {crntCurrency}{cartTotal}</p>
+			<p id='cartTotal'>Total: {crntCurrency}{cartTotal}</p>
 			<button id="checkoutBtn">Checkout</button>
 		</div>
 	)
@@ -72,37 +75,40 @@ function OrderSummary() {
 //**************************************************************************** 
 //child of Cart. List of items is constructed of instances of CartItems and is called in Cart.
 //**************************************************************************** 
-function CartItems({ img, product, price, quantity, total, id }) {
+function CartItems({ img, product, price, quantity, total, cartId}) {
 	const [number, setNumber] 			= useState(quantity);
 	const [totalPrice, setTotalPrice]	= useState(total);
+	const [currentCart, setCurrentCart] = useState(usrCart)
 
 	useEffect(()=>{
-		const total = document.getElementById('total');
-		
 		let cartTotal = 0;
 		usrCart.forEach(item => {
 		cartTotal += (item.price * item.quantity);
 	})
-		total.textContent = `Total: ${crntCurrency}${cartTotal}`;
-	},[number,totalPrice])
+	document.getElementById('cartTotal').textContent = `Total: ${crntCurrency}${cartTotal}`;
+	},[number,totalPrice, usrCart])
 	
-	const addOne = () => {
-		//console.log(`# OF ITEMS AT ()CALL: ${usrCart[id].quantity}`); //! the usrCart obj is untouched at the moment.
-		usrCart[id].quantity +=1
+	const addOne = () => {		
+		usrCart[cartId].quantity +=1
 		setNumber(number +1);
-		setTotalPrice(totalPrice + price)
-			
+		setTotalPrice(totalPrice + price)			
 	}
 	const removeOne = () => {
-		//console.log(`# OF ITEMS AT ()CALL: ${usrCart[id].quantity}`); //! the usrCart obj is untouched at the moment.
-		usrCart[id].quantity -=1
+		usrCart[cartId].quantity -=1
 		setNumber(number -1);
-		setTotalPrice(totalPrice - price)
-		
+		setTotalPrice(totalPrice - price)		
+	}
+	const deleteItem = () =>{
+		console.log(cartId)
+		usrCart.forEach(item =>{
+			if(item.id === usrCart[cartId].id){
+				usrCart.splice(item,1)
+			}
+		})	
 	}
 
 	return (
-		<div className="cartitem" id={id}>
+		<div className="cartitem" id={cartId}>
 			<img src={img} alt={product} className="cartItemImage"></img>
 			<div className="cartItemInfo">
 				<div>{product}</div>
@@ -119,6 +125,7 @@ function CartItems({ img, product, price, quantity, total, id }) {
 					<div>Total:</div>
 					<div>{crntCurrency}{totalPrice}</div>
 				</div>
+				<button id='trashcan'onClick={deleteItem}></button>
 			</div>
 		</div>
 	)
