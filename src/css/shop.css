@@ -9,7 +9,7 @@
 	flex-direction:column;
 	justify-content: center;
 	align-items:center;
-	background-color:beige;
+	background-color: white;
 	width:70%;
 	min-height:800px;
 	margin-left:15%;
@@ -46,7 +46,7 @@
 	background-color: white;
 }
 .card:hover{
-	background-color:rgb(174, 207, 236);
+	background-color:rgb(232, 240, 247);
 }
 .cardImage{
 	height: 200px;
