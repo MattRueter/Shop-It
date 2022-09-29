@@ -64,8 +64,8 @@ export default function BlogPage (){
 export function InfoCard ({image,title,post}) {
 	return(
 		<div className="infoCard">
-			<img src={image}></img>
-			<h4>{title}</h4>
+				<img src={image}></img>
+				<h3>{title}</h3>			
 			<div className="infoCardSummary">{post}</div>
 		</div>
 	)
