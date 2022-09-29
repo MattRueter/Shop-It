@@ -52,12 +52,6 @@ let podcastsDB =[
 	},
 ]
 export default function PodcastsPage () {
-	const podcasts =podcastsDB.map((item,index)=>{
-		return(
-			<InfoCard image={item.img} title={`Episode-${index+1}: ${item.title}`} post={item.post} />
-		)
-	})
-
 	return (
 		<div>
 			<Navbar />
@@ -72,7 +66,7 @@ export default function PodcastsPage () {
 				</div>
 			</header>
 			<main className="lightMain">
-				{podcasts}
+				<InfoCard database={podcastsDB} />
 			</main>
 			<Footer />
 		</div>

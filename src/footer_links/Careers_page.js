@@ -35,11 +35,6 @@ let jobPostsDB =[
 
 
 export default function CareersPage (){
-	const jobPosts = jobPostsDB.map((item,index)=>{
-		return(
-			<InfoCard image={item.img} title={item.title} post={item.post} />
-		)
-	})
 	return (
 		<div id="careersBackground">
 			<Navbar />
@@ -62,9 +57,8 @@ export default function CareersPage (){
 					<p className="lightText">Even if what you're looking for isn't available, 
 					we'd always like to hear from you. 
 					</p>
-					{jobPosts}
+					<InfoCard database={jobPostsDB} />
 				</main>
-
 			</div>
 			<Footer />
 		</div>

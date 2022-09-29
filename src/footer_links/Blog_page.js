@@ -39,12 +39,6 @@ let postsDB =[
 
 
 export default function BlogPage (){
-	const posts = postsDB.map((item,index)=>{
-		return(
-			<InfoCard image={item.img} title={item.title} post={item.post} />
-		)
-	})
-
 	return (
 		<div id='blogBackground'>
 			<Navbar />
@@ -54,19 +48,25 @@ export default function BlogPage (){
 				Topics range from fashion, to small business management, 
 				crafting to sustainable living.
 				</p>
-				{posts}
+				<InfoCard database={postsDB}/>
 			</main>
 			<Footer />
 		</div>
 	)
 }
 
-export function InfoCard ({image,title,post}) {
+export function InfoCard ({database}) {
+
 	return(
-		<div className="infoCard">
-				<img src={image}></img>
-				<h3>{title}</h3>			
-			<div className="infoCardSummary">{post}</div>
+		<div>
+			{database.map((item,index) =>(
+			<div className="infoCard" key={index}>
+					<img src={item.img}></img>
+					<h3>{item.title}</h3>			
+				<div className="infoCardSummary">{item.post}</div>
+			</div>
+			))}
 		</div>
+
 	)
 }
