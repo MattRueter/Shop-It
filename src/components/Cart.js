@@ -28,6 +28,15 @@ function Cart() {
 	const [currentCart, setCurrentCart] = useState(usrCart);
 	
 
+	useEffect(()=>{
+		let cartTotal = 0;
+		usrCart.forEach(item => {
+		cartTotal += (item.price * item.quantity);
+	})
+	document.getElementById('cartTotal').textContent = `Total: ${crntCurrency}${cartTotal}`;
+	},[currentCart])
+
+
 	const deleteItem = (cartId) =>{		
 		
 		let itemToDelete = currentCart[cartId].productId;
