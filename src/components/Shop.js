@@ -16,7 +16,7 @@ export default function Shop (){
 	const allItems = stock.map((item,index)=>{
 		
 		return(
-			<Card img={item.img} product={item.product} price={item.price}id={index}key={index} />
+			<Card img={item.img} product={item.product} price={item.price}id={item.id}key={index} />
 		)
 	});
 
@@ -40,7 +40,22 @@ export default function Shop (){
 function Card ({img,product, price, id}){
 
 	function addItem (){
-		usrCart.push({product, price, img, quantity:1, id});
+		if(!checkCart()){
+			usrCart.push({product, price, img, quantity:1, id});
+		}else{
+			console.log(`${product} already in cart` );
+		}		
+	}
+
+	function checkCart (){
+		let foundItem = false;
+		usrCart.forEach((item)=>{
+			if(item.id === id){
+				console.log(item)
+				foundItem = true
+			}
+		})
+		return foundItem;
 	}
 
 	return (
