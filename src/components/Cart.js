@@ -27,14 +27,16 @@ export default function CartPage() {
 function Cart() {
 	const [currentCart, setCurrentCart] = useState(usrCart);
 	
+
 	const deleteItem = (cartId) =>{		
 		
-		usrCart.forEach(item =>{
-			if(item.id == usrCart[cartId].id){
-				usrCart.splice(item,1)
-			}
-		})
-		const updatedCart = usrCart.filter((item) =>item.id !== cartId)
+		let itemToDelete = currentCart[cartId].productId;
+		console.log(`REMOVING item with productId ${itemToDelete}`);
+
+		const updatedCart = currentCart.filter((item) => item.productId !== itemToDelete)
+		usrCart.splice(cartId,1);
+
+		console.log(updatedCart)
 		setCurrentCart(updatedCart);	
 	};
 	
@@ -47,7 +49,7 @@ function Cart() {
 				quantity={item.quantity}
 				total={item.price * item.quantity}
 				cartId={index}
-				key={item.id}
+				key={item.productId}
 				deleteItem={deleteItem}
 			/>
 		)
