@@ -54,17 +54,14 @@ let podcastsDB =[
 export default function PodcastsPage () {
 	return (
 		<div>
-			<Navbar />
-			<header className="lightText" >
-				<h1>Podcasts</h1>
-				<h2>We have our own podcasts!</h2>
-				<div id="headerContainer">
+			<Navbar />				
+				<header className="lightText" id="headerContainer">
+					<h1>Podcasts</h1>
 					<p>
 					Join Edu and Maree as they chat about things related to 
 					making and selling clothes etc. etc..
 					</p>
-				</div>
-			</header>
+				</header>			
 			<main className="lightMain">
 				<InfoCard database={podcastsDB} />
 			</main>
