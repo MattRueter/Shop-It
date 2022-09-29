@@ -136,10 +136,12 @@ footer{
 	border:1px solid black;
 	box-shadow: 1px 1px 1px black;
 }
+.infoCard:hover{
+  background-color: #eeeff1;
+}
 .infoCardSummary{
 	width: 85%;
 	overflow:hidden;
 	white-space:nowrap;
 	text-overflow:ellipsis;
-
 }
