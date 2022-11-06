@@ -115,9 +115,11 @@ function CartItems({ img, product, price, quantity, total, cartId, deleteItem}) 
 		setTotalPrice(totalPrice + price)			
 	}
 	const removeOne = () => {
-		usrCart[cartId].quantity -=1
-		setNumber(number -1);
-		setTotalPrice(totalPrice - price)		
+		if(usrCart[cartId].quantity >0){
+			usrCart[cartId].quantity -=1
+			setNumber(number -1);
+			setTotalPrice(totalPrice - price)		
+		}
 	}
 	
 
