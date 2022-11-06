@@ -40,12 +40,10 @@ function Cart() {
 	const deleteItem = (cartId) =>{		
 		
 		let itemToDelete = currentCart[cartId].productId;
-		console.log(`REMOVING item with productId ${itemToDelete}`);
-
+	
 		const updatedCart = currentCart.filter((item) => item.productId !== itemToDelete)
 		usrCart.splice(cartId,1);
 
-		console.log(updatedCart)
 		setCurrentCart(updatedCart);	
 	};
 	

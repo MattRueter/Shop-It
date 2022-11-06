@@ -43,7 +43,7 @@ function Card ({img,product, price, productId}){
 		if(!checkCart()){
 			usrCart.push({product, price, img, quantity:1, productId});
 		}else{
-			console.log(`${product} already in cart` );
+			alert(`${product} already in cart` );
 		}		
 	}
 
@@ -51,7 +51,6 @@ function Card ({img,product, price, productId}){
 		let foundItem = false;
 		usrCart.forEach((item)=>{
 			if(item.productId === productId){
-				console.log(item)
 				foundItem = true
 			}
 		})
