@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import { HashRouter,BrowserRouter, Routes, Route} from 'react-router-dom';
 import Home from './components/Home.js'
 import Shop from './components/Shop.js';
 import CartPage from './components/Cart.js';
@@ -14,7 +14,7 @@ import PhotoCreditsPage from './footer_links/PhotoCredits_page';
 
 function RouteSwitch (){
 	return(
-		<BrowserRouter>
+		<HashRouter>
 			<Routes>
 				<Route path='/' 			element={<Home/>} 			/>
 				<Route path='/Shop' 		element={<Shop/>}			/>
@@ -28,7 +28,7 @@ function RouteSwitch (){
 				<Route path='/Workshops'	element={<WorkshopsPage/>}	/>
 				<Route path='/Photo-credits'element={<PhotoCreditsPage />}/>
 			</Routes>
-		</BrowserRouter>
+		</HashRouter>
 	)
 }
 export default RouteSwitch;
