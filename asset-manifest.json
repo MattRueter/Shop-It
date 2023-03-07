@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/Shop-It/static/css/main.aab54c74.css",
+    "main.js": "/Shop-It/static/js/main.c38c5e49.js",
+    "static/media/wool-socks.jpg": "/Shop-It/static/media/wool-socks.423358ad9a3dee7ef897.jpg",
+    "static/media/woolbackdrop.jpg": "/Shop-It/static/media/woolbackdrop.1e9e09b6ec029dc42a68.jpg",
+    "static/media/handbag.jpg": "/Shop-It/static/media/handbag.3cfdaeafac32bbe16abe.jpg",
+    "static/media/jeans.jpg": "/Shop-It/static/media/jeans.0b894fef1dd881f7a7af.jpg",
+    "static/media/cotton-shorts.jpg": "/Shop-It/static/media/cotton-shorts.f0e4cafa14398d938297.jpg",
+    "static/media/cart_clothing_rack.jpg": "/Shop-It/static/media/cart_clothing_rack.f029fd580df1d440d11d.jpg",
+    "static/media/generic clothing rack.jpg": "/Shop-It/static/media/generic clothing rack.504997e132b2f76d66b6.jpg",
+    "static/media/woolset.jpg": "/Shop-It/static/media/woolset.e296c219551674cdb4bd.jpg",
+    "static/media/dress.jpg": "/Shop-It/static/media/dress.fd15b5ee162a6821d3e9.jpg",
+    "static/media/office.jpg": "/Shop-It/static/media/office.a2f27e31f99519ae345c.jpg",
+    "static/media/podcasts.jpg": "/Shop-It/static/media/podcasts.3dcb37de6d19af5ebe7b.jpg",
+    "static/media/designer.jpg": "/Shop-It/static/media/designer.836d13940067cce5cf7b.jpg",
+    "static/media/sweater.jpg": "/Shop-It/static/media/sweater.8680a3b3dd31c6d9eb27.jpg",
+    "static/media/chair and sweater.jpg": "/Shop-It/static/media/chair and sweater.8fca30f302a227e0f1bc.jpg",
+    "static/media/lens.jpg": "/Shop-It/static/media/lens.ad5364a891bd54308132.jpg",
+    "static/media/camera.jpg": "/Shop-It/static/media/camera.c7b3b7807cef81b21bc7.jpg",
+    "static/media/v-neck-sweater.jpg": "/Shop-It/static/media/v-neck-sweater.66d59d3e1af445fdf626.jpg",
+    "static/media/dark-jeans.jpg": "/Shop-It/static/media/dark-jeans.b052f3de83f18b330b9e.jpg",
+    "index.html": "/Shop-It/index.html",
+    "main.aab54c74.css.map": "/Shop-It/static/css/main.aab54c74.css.map",
+    "main.c38c5e49.js.map": "/Shop-It/static/js/main.c38c5e49.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.aab54c74.css",
+    "static/js/main.c38c5e49.js"
+  ]
+}
